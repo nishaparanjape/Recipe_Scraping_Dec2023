@@ -6,9 +6,11 @@
     <classes>
       <class name="com.testcases.TC_001_Diabetes">
         <methods>
+          <include name="CheckForHR"/>
           <include name="setup"/>
           <include name="CheckForA"/>
           <include name="tearDown"/>
+          <include name="diabetesData"/>
         </methods>
       </class> <!-- com.testcases.TC_001_Diabetes -->
     </classes>
