@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-12-17T22:25:39 EST" name="Suite" finished-at="2023-12-17T22:25:55 EST" duration-ms="15761">
+  <suite started-at="2023-12-18T15:05:50 EST" name="Suite" finished-at="2023-12-18T15:19:36 EST" duration-ms="825659">
     <groups>
     </groups>
-    <test started-at="2023-12-17T22:25:39 EST" name="Test" finished-at="2023-12-17T22:25:55 EST" duration-ms="15761">
-      <class name="com.testcases.TC_001_Diabetes">
-        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.testcases.TC_001_Diabetes@58d75e99]" started-at="2023-12-17T22:25:39 EST" name="setup" finished-at="2023-12-17T22:25:50 EST" duration-ms="10537" status="PASS">
+    <test started-at="2023-12-18T15:05:50 EST" name="Test" finished-at="2023-12-18T15:19:36 EST" duration-ms="825659">
+      <class name="com.testcases.TC_002_Hypothyroidism">
+        <test-method is-config="true" signature="setup(java.lang.String)[pri:0, instance:com.testcases.TC_002_Hypothyroidism@478190fc]" started-at="2023-12-18T15:05:50 EST" name="setup" finished-at="2023-12-18T15:06:01 EST" duration-ms="10157" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,15 +18,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="CheckForA()[pri:3, instance:com.testcases.TC_001_Diabetes@58d75e99]" started-at="2023-12-17T22:25:50 EST" name="CheckForA" finished-at="2023-12-17T22:25:55 EST" duration-ms="4959" status="PASS">
+        <test-method signature="hypothyroidism()[pri:1, instance:com.testcases.TC_002_Hypothyroidism@478190fc]" started-at="2023-12-18T15:06:01 EST" name="hypothyroidism" finished-at="2023-12-18T15:19:34 EST" duration-ms="813727" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- hypothyroidism -->
+        <test-method signature="CheckForHR()[pri:2, instance:com.testcases.TC_002_Hypothyroidism@478190fc]" started-at="2023-12-18T15:19:34 EST" name="CheckForHR" finished-at="2023-12-18T15:19:35 EST" duration-ms="110" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CheckForHR -->
+        <test-method signature="CheckForA()[pri:3, instance:com.testcases.TC_002_Hypothyroidism@478190fc]" started-at="2023-12-18T15:19:35 EST" name="CheckForA" finished-at="2023-12-18T15:19:36 EST" duration-ms="1181" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- CheckForA -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.TC_001_Diabetes@58d75e99]" started-at="2023-12-17T22:25:55 EST" name="tearDown" finished-at="2023-12-17T22:25:55 EST" duration-ms="195" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.testcases.TC_002_Hypothyroidism@478190fc]" started-at="2023-12-18T15:19:36 EST" name="tearDown" finished-at="2023-12-18T15:19:36 EST" duration-ms="420" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- com.testcases.TC_001_Diabetes -->
+      </class> <!-- com.testcases.TC_002_Hypothyroidism -->
     </test> <!-- Test -->
   </suite> <!-- Suite -->
 </testng-results>

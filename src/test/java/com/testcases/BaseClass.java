@@ -117,7 +117,7 @@ public class BaseClass {
 		File excelfile = new File(path);
 		FileInputStream fis = new FileInputStream(excelfile);
 		XSSFWorkbook workbook = new XSSFWorkbook(fis);
-		XSSFSheet sheet = workbook.getSheetAt(0);// ("EliminatedItems");
+		XSSFSheet sheet = workbook.getSheetAt(1);// ("EliminatedItems");
 		int lastRow = sheet.getLastRowNum();
 
 		int i = 0;
