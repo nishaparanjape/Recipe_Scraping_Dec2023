@@ -4,10 +4,10 @@
   <test thread-count="5" name="Test">
    <parameter name="browser" value="chrome"/> 
     <classes>  
-            <class name="com.testcases.TC_001_Diabetes"/>
-		    <!-- <class name="com.testcases.TC_002_Hypothyroidism"/>
+            <!-- <class name="com.testcases.TC_001_Diabetes"/>-->
+		    <!-- <class name="com.testcases.TC_002_Hypothyroidism"/>-->
             <class name="com.testcases.TC_003_Hypertension"/>
-            <class name="com.testcases.TC_004_PCOS"/> -->		
+            <!--<class name="com.testcases.TC_004_PCOS"/> -->		
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
