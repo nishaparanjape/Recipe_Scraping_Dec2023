@@ -70,7 +70,6 @@ public class BaseClass {
 				List<WebElement> listWECTime;
 	@FindBys(@FindBy(xpath="//div[@class='tags']/a")) List<WebElement> listWETags;			
 	
-
 	@Parameters("browser")
 	@BeforeClass
 	public void setup(String br) throws Exception {
@@ -358,6 +357,7 @@ public class BaseClass {
 				//get recipe ID
 				id = listxPathIDs.get(i).getText();
 				System.out.println("id : " + id);
+				Loggerload.info("Recipe ID : " + id);
 				
 				//get recipe name
 				name = listxPathNames.get(i).getText();
@@ -377,6 +377,7 @@ public class BaseClass {
 				//don't go ahead for saving in the excel
 				if (bFound){
 					System.out.println("found in name..so navigating back to lists page..");
+					Loggerload.info("found in name..so navigating back to lists page..");
 					continue;
 				}
 				bFound = false;
@@ -385,10 +386,7 @@ public class BaseClass {
 				//System.out.println("xpathname : " + xPathName);
 				listxPathNames.get(i).click();		
 				System.out.println("recipe opened");
-				Thread.sleep(3000);
-						
-				System.out.println(driver.getCurrentUrl());
-										
+				Thread.sleep(3000);										
 				ingredients = WEIngredients.getText();
 				
 				for (String word: eliminatedList ) {
@@ -402,8 +400,8 @@ public class BaseClass {
 				//don't go ahead for saving in the excel
 				if (bFound){
 					System.out.println("found in ingredients..so navigating back to lists page..");
-					driver.navigate().to(strMainPage);
-					
+					Loggerload.info("found in ingredients..so navigating back to lists page..");
+					driver.navigate().to(strMainPage);			
 					Thread.sleep(2000);
 					continue;
 				}
@@ -434,7 +432,6 @@ public class BaseClass {
 				url = driver.getCurrentUrl();
 				
 				int iNoOfTags = listWETags.size();
-				System.out.println("no of tags : " + iNoOfTags);
 				strRecipeCategory = "";
 				strFoodCategory = "";
 				

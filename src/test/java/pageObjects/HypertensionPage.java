@@ -9,42 +9,43 @@ import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.PageFactory;
 import com.testcases.BaseClass;
 
-public class DiabetesPage extends BaseClass{
+public class HypertensionPage extends BaseClass {
 	WebDriver driver;
+
+	@FindBy(xpath="//*[@id=\"nav\"]/li[1]/a/div") WebElement recipe;
+	@FindBy(xpath="//a[@title='Click here to see all recipes under High Blood Pressure']") WebElement hypertension;
+	@FindBys(@FindBy(xpath="//a[@class='respglink']")) static List<WebElement> listWEPages;
 	
-	@FindBy(xpath="//a[@href='RecipeCategories.aspx']") WebElement lnkRecipes;
-	@FindBy(xpath="//*[@title='Click here to see all recipes under Diabetic recipes']")WebElement lnkDiabeticRecipes;
-	@FindBys(@FindBy(xpath="//a[@class='respglink']")) List<WebElement> listWEPages;	
-	
-	public DiabetesPage(WebDriver driver) {
+	public HypertensionPage(WebDriver driver) {
 		PageFactory.initElements(driver, this);
-		this.driver = driver;
+      this.driver = driver;
 	}
 	
 	public void GetRecipes() throws InterruptedException, IOException {
-		lnkRecipes.click();
-		lnkDiabeticRecipes.click();
+		recipe.click();
+		hypertension.click();
 		int i=1;
 		String strWebPageBaseLink = driver.getCurrentUrl() + "?pageindex=";
 		int noOfPages = Integer.valueOf(listWEPages.get(listWEPages.size()-1).getText());
 		System.out.println("No of pages : " + noOfPages);
 		String strWebPageLink = "";
-		for(i=1;i<=noOfPages;i++) {					
+		for(i=1;i<=noOfPages;i++) {	
 			System.out.println(i);
 			strWebPageLink = strWebPageBaseLink + i;
 			driver.navigate().to(strWebPageLink);
 			Thread.sleep(2000);
-			RecipesPageWise(driver, listDiabetes, "diabetes", 0);
+			
+			RecipesPageWise(driver, listHypertension, "hypertension", 2);
 		}
 	}
 	
 	public static void CheckForHealthyRecipes() throws InterruptedException, IOException {
-		CheckForHealthyItems(listHDiabetes, 0);
+		CheckForHealthyItems(listHHTension, 2);
 	}
 	
 	public static void CheckForAllergies() throws InterruptedException, IOException {
 		for(int i=0;i<listAllergies.size();i++) {
-			CheckForAllergy(listAllergies.get(i), 0);
+			CheckForAllergy(listAllergies.get(i), 2);
 		}
 	}
 }
