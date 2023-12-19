@@ -10,6 +10,8 @@ import java.nio.file.Paths;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
 import java.util.ResourceBundle;
 
 import org.apache.commons.io.FileUtils;
@@ -77,7 +79,12 @@ public class BaseClass {
 			rb = ResourceBundle.getBundle("config");
 			if (br.equalsIgnoreCase("chrome")) {
 				ChromeOptions options = new ChromeOptions();
-				options.addArguments("--headless=new");
+				options.addArguments("--headless=new");			
+			        Map<String, Object> p = new HashMap<String, Object>();
+			        p.put("profile.managed_default_content_settings.images", 2);
+			        //capabilities added to browser
+			        ChromeOptions opt = new ChromeOptions();
+			       opt.setExperimentalOption("prefs", p);
 				driver = new ChromeDriver(options);
 			} 
 			else if (br.equalsIgnoreCase("edge")) {
